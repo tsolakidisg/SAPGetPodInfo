@@ -15,8 +15,8 @@ namespace SAPGetPodInfo
     public static class GetPodInfo
     {
 
-        private static readonly string Username = "webapp";
-        private static readonly string Password = "asd234";
+        private static readonly string Username = "username";
+        private static readonly string Password = "password";
 
 
         [FunctionName("GetPodInfo")]
@@ -26,7 +26,7 @@ namespace SAPGetPodInfo
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            var options = new RestClientOptions("https://172.17.8.30:6443/sap/bc/srt/rfc/sap/zwapp_get_pod_info/100/zwapp_get_pod_info/zwapp_get_pod_info")
+            var options = new RestClientOptions("https://1.1.1.1:1010/src/dev/null")
             {
                 RemoteCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) => true
             };
